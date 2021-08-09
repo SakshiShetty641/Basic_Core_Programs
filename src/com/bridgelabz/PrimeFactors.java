@@ -10,15 +10,15 @@ public class PrimeFactors {
 		System.out.print("Enter a Number : ");
 		int n = sc.nextInt();
 		System.out.print("The Prime Factors of " + n + " are : ");
-		int i = 2;
-		while (n > 1) {
-			if (n % i == 0) {
-				System.out.print(i + " ");
+		for (int i = 2; i < n; i++) {
+			while (n % i == 0) {
+				System.out.println(i + " ");
 				n = n / i;
-			} else
-				i++;
+			}
 		}
-		System.out.println(" ");
-		sc.close();
+		if (n > 2) {
+			System.out.println(n);
+			sc.close();
+		}
 	}
 }
